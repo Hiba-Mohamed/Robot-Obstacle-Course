@@ -147,7 +147,6 @@ def start():
         chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
         time.sleep(5)
    #C To D
-
     chassis_ctrl.move_with_distance(0,5)
     chassis_ctrl.move_with_distance(0,5)
     chassis_ctrl.move_with_distance(0,0.35)
@@ -206,3 +205,51 @@ def start():
         chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
         chassis_ctrl.move_with_distance(0,2.5)
         chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
+
+    # Go from E to F   #Measurements needed
+    chassis_ctrl.move_with_distance(0,2.5) 
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
+    chassis_ctrl.move_with_distance(0,2.5)
+
+    #Position F    #Measurements needed
+    ScanPositionF()
+    chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
+    chassis_ctrl.move_with_distance(0,2.5)
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
+
+    #Go from F to G     #Measurements needed
+    chassis_ctrl.move_with_distance(0,2.5)
+    chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
+    chassis_ctrl.move_with_distance(0,1)
+
+    # skip this room, it is the poison room #Measurements needed
+    PoisonRoom()
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
+    chassis_ctrl.move_with_distance(0,1)
+    chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
+
+    # Go from G to H    #Measurements needed
+    chassis_ctrl.move_with_distance(0,7)
+
+    # face the opposite direction of the hallway
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,90)
+
+    # Go from H to position D
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,4)
+
+
+
+
+
+
+
+
+
+
+
+
