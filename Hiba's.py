@@ -241,6 +241,17 @@ def start():
     chassis_ctrl.move_with_distance(0,5)
     chassis_ctrl.move_with_distance(0,5)
     chassis_ctrl.move_with_distance(0,4)
+    led_ctrl.gun_on()
+    time.sleep(5)       # Keep the lights on for 5 seconds
+    led_ctrl.gun_off()
+
+    # Go from D to A 
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,5)
+    chassis_ctrl.move_with_distance(0,0.32)
+    
 
 
 
