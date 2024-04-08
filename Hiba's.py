@@ -45,8 +45,8 @@ def ScanPositionF():
 
 def PositionFMarker1():
     # Rotate chassis and gimbal 360 degrees opposite to each other
-    chassis_ctrl.move_with_time(0, 0, 2000)  # Rotate chassis for 2000 milliseconds (assuming 2000ms is full rotation)
-    gimbal_ctrl.yaw_ctrl(180, 2000)  # Rotate gimbal by 180 degrees opposite direction in the same duration
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,360)
+    gimbal_ctrl.rotate_with_degree(rm_define.clockwise,360)
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='off')  # Turn off LED lights
 
 def PositionFMarker2():
@@ -59,8 +59,8 @@ def PositionFMarker2():
 
 def PositionFMarker3():
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='on')  # Set LED lights to green
-    chassis_ctrl.move_with_time(0, 0, 2000)  # Rotate chassis for 2000 milliseconds (assuming 2000ms is full rotation)
-    gimbal_ctrl.yaw_ctrl(180, 2000)  # Rotate gimbal by 180 degrees opposite direction in the same duration
+    chassis_ctrl.rotate_with_degree(rm_define.anticlockwise,360)
+    gimbal_ctrl.rotate_with_degree(rm_define.clockwise,360)
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='off')  # Turn off LED lights
 
 def FireRoom():
