@@ -131,7 +131,6 @@ def start():
     chassis_ctrl.move_with_distance(0,5)
     chassis_ctrl.move_with_distance(0,0.35)
     chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
-    # ScanRoomType()
     chassis_ctrl.move_with_distance(0,2.5)
     chassis_ctrl.rotate_with_degree(rm_define.clockwise,90)
     chassis_ctrl.move_with_distance(0,1.8)
