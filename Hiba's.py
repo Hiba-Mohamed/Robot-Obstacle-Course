@@ -39,6 +39,7 @@ def ScanPositionF():
             break
         elif vision_recognized_marker_number_[three](msg):
             PositionFMarker3()
+
             break
     vision_ctrl.disable_detection(rm_define.vision_detection_marker)
 
@@ -53,11 +54,14 @@ def PositionFMarker2():
     led_ctrl.set_top_led(rm_define.armor_top_all, 255, 0, 0, effect='on')  # Set LED lights to red
     chassis_ctrl.move_with_speed(0, 0)  # Stop chassis movement
     gimbal_ctrl.yaw_ctrl(0, 0)  # Stop gimbal movement
+    led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='off')  # Turn off LED lights
+
 
 def PositionFMarker3():
+    led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='on')  # Set LED lights to green
     chassis_ctrl.move_with_time(0, 0, 2000)  # Rotate chassis for 2000 milliseconds (assuming 2000ms is full rotation)
     gimbal_ctrl.yaw_ctrl(180, 2000)  # Rotate gimbal by 180 degrees opposite direction in the same duration
-    led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='on')  # Set LED lights to green
+    led_ctrl.set_top_led(rm_define.armor_top_all, 0, 255, 0, effect='off')  # Turn off LED lights
 
 def FireRoom():
     gun_ctrl.fire_once()
